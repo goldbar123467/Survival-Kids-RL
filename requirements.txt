@@ -1,0 +1,5 @@
+pyboy>=2.0.0
+gymnasium>=1.0.0
+numpy
+Pillow
+torch

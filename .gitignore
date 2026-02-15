@@ -1,0 +1,29 @@
+# ROMs (copyrighted — do not distribute)
+roms/
+GBC-Roms/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# Training artifacts
+checkpoints/
+logs/
+
+# PyBoy
+*.state
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Debug screenshots
+*.png
