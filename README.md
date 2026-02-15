@@ -9,6 +9,7 @@ A DQN agent learns to survive on a deserted island by managing HP, hunger, thirs
 ```
 survival_kids_env.py   Gymnasium environment wrapping PyBoy
 train.py               DQN training loop with logging
+stream.py              Live MJPEG stream server for remote viewing
 memory_scan.py         Memory address discovery tool
 ```
 
@@ -98,6 +99,25 @@ python train.py --render --episodes 5
 | `--gamma` | 0.99 | Discount factor |
 | `--render` | off | Show gameplay window |
 | `--random` | off | Random agent (no learning) |
+
+### Live Stream (Remote Training)
+
+Watch the agent train in real-time from your browser — ideal for headless GPU instances (Vast.ai, Lambda, etc.):
+
+```bash
+# Start training with live stream on port 5555
+python stream.py
+
+# Custom port
+python stream.py --port 8080 --episodes 1000
+```
+
+Then open `http://<your-server-ip>:5555` in your browser. You'll see:
+- Live game footage (3x scaled, ~30 FPS MJPEG stream)
+- Real-time HP / hunger / thirst / fatigue bars
+- Training stats (episode, reward, epsilon, tiles explored)
+
+On Vast.ai, make sure port 5555 is open (or use the port you specify with `--port`).
 
 ### Training Output
 

@@ -3,3 +3,4 @@ gymnasium>=1.0.0
 numpy
 Pillow
 torch
+flask
